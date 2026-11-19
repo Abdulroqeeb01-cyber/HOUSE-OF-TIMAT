@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOUSE-OF-TIMAT — Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="admin-body">
+    <header class="admin-header">
+        <a class="brand" href="index.html">
+            <span class="logo"><img src="logo.png" alt="HOUSE-OF-TIMAT logo">
+            </span>
+        </a>
+        <div>
+            <span class="admin-label" style="font-weight: bolder;">
+                <h1 style="color: black; font-weight: bolder;">Admin<br>Dashboard</h1>
+            </span>
+        </div>
+    </header>
+    <main class="admin-wrap">
+        <div class="admin-title">
+            <div>
+                <p class="eyebrow" style="font-weight: bolder;">OVERVIEW</p>
+                <h1 style="font-weight: bolder;">Welcome back, <br><em>Timat.</em></h1>
+                <p style="font-weight: bolder;">Here are your store </p>
+            </div><button class="button dark" id="addProductBtn" style="border-radius: 12px; font-weight: bolder;">Add
+                product</button>
+        </div>
+        <div class="stats">
+            <article style="border-radius: 12px;">
+                <span style="font-weight: bolder;">Total sales</span>
+                <strong id="salesValue" style="font-weight: bolder;">₦0</strong>
+                <small id="salesNote" style="font-weight: bolder;">Across recorded orders</small>
+            </article>
+            <article style="border-radius: 12px;">
+                <span style="font-weight: bolder;">Orders</span>
+                <strong id="ordersValue" style="font-weight: bolder;">0</strong>
+                <small style="font-weight: bolder;">Recorded checkouts</small>
+            </article>
+            <article style="border-radius: 12px;">
+                <span style="font-weight: bolder;">Products</span>
+                <strong id="productsValue" style="font-weight: bolder;">0</strong>
+                <small style="font-weight: bolder;">In your catalogue</small>
+            </article>
+            <article style="border-radius: 12px;">
+                <span style="font-weight: bolder;">Low stock</span>
+                <strong id="lowStockValue" style="font-weight: bolder;">0</strong>
+                <small style="font-weight: bolder;">Items with 5 or fewer units</small>
+            </article>
+        </div>
+        <div class="admin-grid">
+            <section class="panel" style="border-radius: 12px;">
+                <div class="panel-head">
+                    <div>
+                        <p class="eyebrow" style="font-weight: bolder;">PERFORMANCE</p>
+                        <h2 style="font-weight: bolder;">Sales overview</h2>
+                    </div><span class="period" style="font-weight: bolder;">ALL TIME · ALL TIME · STORE OVERVIEW</span>
+                </div>
+                <div class="chart" id="salesChart"></div>
+            </section>
+            <section class="panel" style="border-radius: 12px;">
+                <div class="panel-head">
+                    <div>
+                        <p class="eyebrow" style="font-weight: bolder;">LATEST ACTIVITY</p>
+                        <h2 style="font-weight: bolder;">Recent orders</h2>
+                    </div>
+                </div>
+                <div class="orders" id="ordersList"></div>
+            </section>
+        </div>
+        <section class="panel inventory-panel" style="border-radius: 12px;">
+            <div class="panel-head">
+                <div>
+                    <p class="eyebrow" style="font-weight: bolder;">YOUR CATALOGUE</p>
+                    <h2 style="font-weight: bolder;">Product inventory</h2>
+                </div>
+                <input class="search" id="inventorySearch" placeholder="Search products..."
+                    style="border-radius: 12px;">
+            </div>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="font-weight: bolder;">Product</th>
+                            <th style="font-weight: bolder;">Category</th>
+                            <th style="font-weight: bolder;">Price</th>
+                            <th style="font-weight: bolder;">Stock</th>
+                            <th style="font-weight: bolder;">Status</th>
+                            <th style="font-weight: bolder;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventoryRows"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="productModal">
+        <form id="productForm">
+            <div class="drawer-head">
+                <h3 id="modalTitle">Add a product</h3><button type="button" id="closeModal">✕</button>
+            </div><label>Product name<input name="name" required placeholder="e.g. The Sunday Dress"></label>
+            <div class="form-row"><label>Category<select name="category">
+                        <option>Dresses</option>
+                        <option>Sets</option>
+                        <option>Tops</option>
+                    </select></label><label>Price (₦)<input name="price" type="number" min="1" required></label></div>
+            <div class="form-row"><label>Available stock<input name="stock" type="number" min="0"
+                        required></label><label>Image URL<input name="image" placeholder="https://..."></label></div>
+            <label>Short description<textarea name="description" rows="2"
+                    placeholder="A little about this piece"></textarea></label><button class="button dark full">Save
+                product</button>
+        </form>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="store.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

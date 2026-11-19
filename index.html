@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HOUSE-OF-TIMAT — refined ready-to-wear for women.">
+    <title>HOUSE-OF-TIMAT — Ready to Wear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="logo"><img src="logo.png" alt=""></span>
+        </a>
+        <nav>
+            <a href="index.html" aria-label="Home" title="Home" class="nav-icon"><svg viewBox="0 0 24 24">
+                    <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" />
+                </svg></a>
+            <a href="shop.html" style="font-weight: bolder;">Shop</a>
+            <a href="about.html" style="font-weight: bolder;">Our Story</a>
+            <a href="faq.html" style="font-weight: bolder;">FAQs</a><a href="contact.html"
+                style="font-weight: bolder;">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <a href="wishlist.html" class="icon-link" title="Wishlist" aria-label="Wishlist">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8z" />
+                </svg></span></a>
+            <button class="cart-button" id="cartToggle" aria-label="Shopping cart" title="Shopping cart"><svg
+                    viewBox="0 0 24 24">
+                    <path d="M3 3h2l2.2 12.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L22 7H6" />
+                    <circle cx="10" cy="21" r="1" />
+                    <circle cx="18" cy="21" r="1" />
+                </svg><span id="cartCount">0</span></button>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow" style="font-weight: bolder;">THE SIGNATURE EDIT · 2026</p>
+            <h1>Elegance,<br><em>without effort.</em></h1>
+            <p style="font-weight: bolder;">Distinctive ready-to-wear for the woman who makes every moment her own.</p>
+            <a class="button dark" href="shop.html" style="border-radius: 12px; font-weight: bolder;">Discover the
+                collection</a>
+        </div>
+        <div class="hero-image" id="heroSlider">
+            <div class="hero-slides">
+                <div class="hero-slide active"
+                    style="background-image:url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1100&q=85')">
+                </div>
+                <div class="hero-slide"
+                    style="background-image:url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85')">
+                </div>
+                <div class="hero-slide"
+                    style="background-image:url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1100&q=85')">
+                </div>
+            </div>
+            <div class="image-note">THE HOUSE<br>EDIT <span id="heroSlideCount">01 / 03</span></div>
+            <button class="hero-arrow hero-prev" type="button" aria-label="Previous slide">‹</button>
+            <button class="hero-arrow hero-next" type="button" aria-label="Next slide">›</button>
+            <div class="hero-dots" aria-label="Choose hero slide">
+                <button class="active" type="button" aria-label="Slide 1"></button>
+                <button type="button" aria-label="Slide 2"></button>
+                <button type="button" aria-label="Slide 3"></button>
+            </div>
+        </div>
+    </section>
+    <section class="intro">
+        <p class="eyebrow" style="font-weight: bolder;">THE HOUSE OF TIMAT</p>
+        <h2 style="font-weight: bolder;">Quiet luxury. <em style="font-weight: bolder;">Confident presence.</em></h2>
+        <p style="font-weight: bolder;">HOUSE-OF-TIMAT creates thoughtfully considered ready-to-wear pieces with refined
+            silhouettes, beautiful
+            details and effortless versatility.</p><a class="text-link" href="about.html">Discover our story →</a>
+    </section>
+    <section class="shop-section">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">CURATED FOR YOU</p>
+                <h2>The signature collection</h2>
+            </div><a class="text-link" href="shop.html">Shop all pieces →</a>
+        </div>
+        <div class="products" id="products"></div>
+    </section>
+    <section class="newsletter">
+        <p class="eyebrow" style="font-weight: bolder;">A NOTE FROM THE HOUSE</p>
+        <h2 style="font-weight: bolder;">Be the first to know.</h2>
+        <p style="font-weight: bolder;">Receive first access to new collections, exclusive edits and restocks.</p>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Your email address" required>
+            <button class="button dark" style="font-weight: bolder;">Join the list</button>
+        </form>
+        <small id="newsletterMsg"></small>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand-block">
+                <a class="brand footer-brand" href="index.html"><span class="logo"><img src="logo.png"
+                            alt="HOUSE-OF-TIMAT logo"></span></a>
+                <p>Designed for your every day.</p>
+            </div>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="contact.html">Contact us</a>
+                <a href="faq.html">FAQs</a>
+                <a href="about.html">Our Story</a>
+            </nav>
+            <div class="footer-socials">
+                <span>Follow the house</span>
+                <div class="socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://whatsapp.com" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <small class="footer-copy">© 2026 HOUSE-OF-TIMAT Studio. All rights reserved.</small>
+    </footer>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="drawer-head">
+            <h3>Your bag</h3><button id="closeCart" aria-label="Close">✕</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-bottom">
+            <div class="total"><span>Subtotal</span><strong id="cartTotal">₦0</strong></div><label class="payment-label"
+                for="paymentMethod">Payment method</label><select id="paymentMethod" class="payment-select">
+                <option value="Paystack">Card / Paystack</option>
+                <option value="Flutterwave">Card / Flutterwave</option>
+                <option value="Bank transfer">Bank transfer</option>
+            </select>
+            <button class="button dark full" id="checkout">Continue to checkout</button><small>Demo checkout only.
+                Connect a payment provider for live orders.</small>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="store.js"></script>
+</body>
+
+</html>
